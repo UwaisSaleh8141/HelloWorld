@@ -14,16 +14,16 @@ class MainActivity : AppCompatActivity() {
         var timesClicked = 0
 
         // get reference to button
-        val myButton = findViewById(R.id.button) as Button
+        val myButton = findViewById<Button>(R.id.button)
 
         // get reference to text view
-        var myTextView = findViewById(R.id.textView) as TextView
+        var myTextView = findViewById<TextView>(R.id.textView)
 
         // set on-click listener
         myButton.setOnClickListener {
-            timesClicked++
+            timesClicked++ //Or timesClicked += 1
             myTextView.text = timesClicked.toString()
-            Toast.makeText(this@MainActivity, "Good Morning!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, getString(R.string.good_morning), Toast.LENGTH_SHORT).show()
         }
     }
 }
