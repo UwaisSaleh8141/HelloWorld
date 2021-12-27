@@ -108,6 +108,53 @@ fun main(){
         println("\nYou're too young")
     }
 
+    // Kotlin’s "when" expression is the replacement of switch statement
+    // from other languages like C, C++, and Java.
+    // It is compact and more powerful than switch statements.
+    var season = 3
+    when(season) {
+        1 -> println("\nSpring")
+        2 -> println("\nSummer")
+        3 -> {
+            println("\nFall")
+            println("Autumn")
+        }
+        4 -> println("\nWinter")
+        else -> println("\nInvalid Season")
+    }
+
+    var month = 3
+    when(month) {
+        1,2,3 -> println("Spring")
+        in 4..6 -> println("Summer")
+        in 7..9 -> println("Fall")
+        in 10..12 -> println("Winter")
+        else -> println("Invalid Season")
+    }
+
+    // challenge - translate the if statement with the age to a when expression
+    when(age) {
+        !in 0..20 -> println("\nYou may drink in the US (21 and older)")
+        in 18..20 -> println("\nYou may vote (18 and older)")
+        16,17 -> println("\nYou can get your drivers licence (16 and older)")
+        else -> println("\nYou're too young")
+    }
+
+    var x : Any = 13.37
+    when(x) {
+        is Int -> println("\n$x is an Int")
+        !is Double -> println("\n$x is not Double")
+        is String -> println("\n$x is a String")
+        else -> println("\n$x is none of the above")
+    }
+
+    // While loop executes a block of code repeatedly as long as a given condition is true
+    var y = 1
+    while(y <= 10) {
+        println("$y ")
+        y++
+    }
+
 
 
 }
