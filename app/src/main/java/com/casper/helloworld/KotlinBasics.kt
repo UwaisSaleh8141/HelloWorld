@@ -50,7 +50,7 @@ fun main(){
     result /= 2
     result *= 5
     result -= 1
-    println("Result: " + result)
+    println("\nResult: " + result)
 
     var moduloResult = 5%2
     println("Modulo Result: " + moduloResult)
@@ -58,7 +58,7 @@ fun main(){
     //Comparison operators (==, !=, <, >, <=, >=)
     val isEqual = 5==3
     // Concatenation - adding of "Strings"
-    println("isEqual is: " + isEqual)
+    println("\nisEqual is: " + isEqual)
 
     // Kotlin has a feature called String Interpolation.
     // This feature allows you to directly insert a template expression inside a String.
@@ -72,5 +72,42 @@ fun main(){
     println("is 5 Greater Than 3: ${5 > 3}")
     println("is 5 Less Than Equal To 3: ${5 <= 3}")
     println("is 5 Less Than Equal To 5: ${5 <= 5}")
+
+    //Assignment operators (+=, -=, *=, /=, %=)
+    var myNum = 5
+    myNum += 3
+    println("\nmyNum is $myNum")
+    myNum *= 4
+    println("myNum is $myNum")  //32
+
+    //Increment & Decrement operators (++, --)
+    myNum++ //33
+    println("myNum is $myNum")
+    // increments after use
+    println("myNum is ${myNum++}")  //34, however it prints 33 (previous value) then increments
+    // increments before use
+    println("myNum is ${++myNum}")  //35 because it is incremented before use
+    println("myNum is ${--myNum}")  //34
+
+    // If Statements
+    var age = 17
+
+    if(age >= 21){
+        println("\nYou may drink in the US (21 and older)")
+    }
+    // Else If Statement - only executed if the if statement is not true
+    else if(age >= 18){
+        println("\nYou may vote (18 and older)")
+    }
+    // Else If Statement - only executed if the foregoing else if statement is not true
+    else if (age >= 16){
+        println("\nYou can get your drivers licence (16 and older)")
+    }
+    // else is only executed if all of the foregoing statements weren't true
+    else{
+        println("\nYou're too young")
+    }
+
+
 
 }
