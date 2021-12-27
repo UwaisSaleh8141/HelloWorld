@@ -45,5 +45,32 @@ fun main(){
     println("First Char: " + firCharInStr)
     println("Last Char: " + lastCharInStr)
 
+    //Arithmetic operators (+, -, *, /, %)
+    var result = 5+3
+    result /= 2
+    result *= 5
+    result -= 1
+    println("Result: " + result)
+
+    var moduloResult = 5%2
+    println("Modulo Result: " + moduloResult)
+
+    //Comparison operators (==, !=, <, >, <=, >=)
+    val isEqual = 5==3
+    // Concatenation - adding of "Strings"
+    println("isEqual is: " + isEqual)
+
+    // Kotlin has a feature called String Interpolation.
+    // This feature allows you to directly insert a template expression inside a String.
+    // Template expressions are tiny pieces of code that are evaluated and
+    // their results are concatenated with the original String.
+    // A template expression is prefixed with $ symbol.
+    // Following are examples of String interpolation
+    val isNotEqual = 5!=5
+    println("isNotEqual is: $isNotEqual")
+
+    println("is 5 Greater Than 3: ${5 > 3}")
+    println("is 5 Less Than Equal To 3: ${5 <= 3}")
+    println("is 5 Less Than Equal To 5: ${5 <= 5}")
 
 }
