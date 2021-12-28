@@ -149,12 +149,70 @@ fun main(){
     }
 
     // While loop executes a block of code repeatedly as long as a given condition is true
-    var y = 1
-    while(y <= 10) {
-        println("$y ")
-        y++
+    var y = 10
+    while(y >= 0) {
+        print("$y ")
+        y-=2
+    }
+    print("\n")
+    // Do while loop
+    // The do-while loop is similar to while loop except that it
+    // tests the condition at the end of the loop.
+    // This means that it will at least execute the body once
+    var z = 1
+    do {
+        print("$z ")
+        z++
+    } while(z <= 10)
+
+    print("\n\n")
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while (feltTemp == "cold"){
+        roomTemp++
+        if(roomTemp == 20){
+            feltTemp = "comfy"
+            println("it's comfy now")
+        }
+    }
+    print("\n")
+
+    // For Loop
+    // A for-loop is used to iterate through ranges, arrays, collections, or anything
+    // that provides an iterator (You’ll learn about iterator, arrays, ranges and collections in a future lecture).
+    for(num in 1..10) {
+        print("$num ")
+    }
+    print("\n")
+    // infix notation
+    for(i in 1 until 10) {	// Same as - for(i in 1.until(10))
+        print("$i ")
+    }
+    print("\n")
+    for(i in 10 downTo 1) {	 // Same as - for(i in 10.downTo(1))
+        print("$i ")
+    }
+    print("\n")
+    for(i in 1 until 10 step 2) { // Same as - for(i in 1.until(10).step(2))
+        print("$i ")
     }
 
+    print("\n\n")
 
+    myFunction()
+    println("Add Up: " + addUp(5,10)  + " Average: " + average(5.0,10.0))
+    println(average(5.0,10.0))
 
+}
+
+fun myFunction(){
+    println("Called From myFunction")
+}
+
+fun addUp(a: Int, b: Int) : Int{
+    return a+b
+}
+
+fun average(a: Double, b: Double) : Double{
+    return (a+b)/2
 }
