@@ -201,9 +201,33 @@ fun main(){
 
     myFunction()
     println("Add Up: " + addUp(5,10)  + " Average: " + average(5.0,10.0))
-    println(average(5.0,10.0))
+    //println(average(5.0,10.0))
+
+    // NULLABLES/OPTIONALS in Kotlin
+    // Kotlin supports nullability as part of its type System.
+    // That means You have the ability to declare whether
+    // a variable can hold a null value or not.
+    // By supporting nullability in the type system,
+    // the compiler can detect
+    // possible NullPointerException errors at compile time
+    // and reduce the possibility of having them thrown at runtime.
+    var name: String = "Uwais"
+    //name = null // Compilation Error
+
+    var nullableName: String? = "Uwais"
+    nullableName = null // Works, because it is of type String nullable
+
+    var len = name.length
+    var len2 = nullableName?.length
+
+    val name1 = nullableName ?: "Guest" //Elvis operator ?:
+    print(name1)
+
+
+
 
 }
+
 
 fun myFunction(){
     println("Called From myFunction")
